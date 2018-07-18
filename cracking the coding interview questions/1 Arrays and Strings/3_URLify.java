@@ -9,6 +9,7 @@ public class URLify {
 		for(int i = 0; i < string.length(); i++) {
 			if(string.charAt(i) == ' ') {
 				if (spaceAdded == false) {
+					spaceAdded = true;
 					urlArray.append('%');
 					urlArray.append('2');
 					urlArray.append('0');
@@ -18,6 +19,7 @@ public class URLify {
 				}
 			}
 			else {
+				spaceAdded = false;
 				urlArray.append(string.charAt(i));
 			}
 		}
